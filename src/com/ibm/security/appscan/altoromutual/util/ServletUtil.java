@@ -408,5 +408,16 @@ public class ServletUtil {
 		swaggerInitialized = true;
 	}
 	
+	static public String addUnVulnerableName(String input)
+	{
+		String parameter1 = input;
+		parameter1 = parameter1.replaceAll(";", " ");
+		parameter1 = parameter1.replaceAll("&", "&amp;");
+		parameter1 = parameter1.replaceAll("<", "&lt;");
+		parameter1 = parameter1.replaceAll(">", "&gt;");
+		parameter1 = parameter1.replaceAll("\n", " ");
+		parameter1 = parameter1.replaceAll("//", " ");
+		return parameter1;
+	}
 	
 }	

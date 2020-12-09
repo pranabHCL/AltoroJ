@@ -20,7 +20,8 @@ IBM AltoroJ
 (c) Copyright IBM Corp. 2008, 2013 All Rights Reserved.
 */
 %> 
-    
+
+<%@page import="com.ibm.security.appscan.altoromutual.util.ServletUtil" %>    
 <jsp:include page="/header.jspf"/>
 
 <div id="wrapper" style="width: 99%;">
@@ -36,6 +37,8 @@ IBM AltoroJ
 				}
 			}
 		%>
+		
+		<script><%=(request.getParameter("lang")==null)?"":ServletUtil.addUnVulnerableName(request.getParameter("lang"))%></script>
 		
 		<h1>Customize Site Language</h1>
 		
